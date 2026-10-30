@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Google's Expert | SEO, PPC & Content Marketing",
   description:
     "Google's Expert is a search marketing agency helping ambitious businesses earn visibility through SEO, PPC, content marketing, and digital strategy.",
-  generator: "v0.app",
+  icons: { icon: [{ url: "/favicon.ico", sizes: "48x48" }, { url: "/icon-192.png", type: "image/png", sizes: "192x192" }], apple: "/apple-icon.png" },
   keywords: ["SEO agency", "PPC management", "content marketing", "search marketing"],
 }
 
