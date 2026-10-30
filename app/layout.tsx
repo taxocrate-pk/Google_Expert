@@ -9,11 +9,11 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Google's Expert | SEO, PPC & Content Marketing",
+  title: "PPC and Social Media Marketing Agency | Google's Expert",
   description:
-    "Google's Expert is a search marketing agency helping ambitious businesses earn visibility through SEO, PPC, content marketing, and digital strategy.",
+    "PPC and social media marketing by Google's Expert: Google Ads, Facebook, Instagram, TikTok and LinkedIn campaigns measured by cost per lead. Islamabad, Pakistan.",
   icons: { icon: [{ url: "/favicon.ico", sizes: "48x48" }, { url: "/icon-192.png", type: "image/png", sizes: "192x192" }], apple: "/apple-icon.png" },
-  keywords: ["SEO agency", "PPC management", "content marketing", "search marketing"],
+  keywords: ["PPC management", "social media marketing", "Google Ads agency", "Facebook ads agency"],
 }
 
 export default function RootLayout({
