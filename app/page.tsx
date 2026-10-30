@@ -63,7 +63,8 @@ export default function Home() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-accent/15 bg-background/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <Link href="#top" className="flex items-center" aria-label="Google's Expert home">
-            <Image src="/google-expert-logo.webp" alt="Google's Expert logo" width={220} height={116} priority className="h-11 w-auto object-contain sm:h-12" />
+            <Image src="/google-expert-logo-mark.webp" alt="Google's Expert logo" width={48} height={48} priority className="h-11 w-11 object-contain sm:h-12 sm:w-12" />
+            <span className="ml-2 font-serif text-lg font-semibold tracking-tight sm:text-xl">Google&apos;s Expert</span>
           </Link>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             <div className="group relative">
