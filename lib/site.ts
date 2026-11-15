@@ -21,4 +21,5 @@ export const sisters = [
   { name: "Digitocrate", href: "https://digitocrate.com/", text: "Fast websites & Next.js" },
   { name: "Google Peak", href: "https://googlepeak.com/", text: "Local SEO & Google Maps" },
   { name: "SEO Content Master", href: "https://seocontentmaster.com/", text: "SEO & content" },
+  { name: "KitZaini", href: "https://kitzaini.com/", text: "Ready-made kits" },
 ]
