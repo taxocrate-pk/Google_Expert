@@ -38,7 +38,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-accent/10 pt-6 text-xs text-muted-foreground sm:flex-row sm:justify-between">
-        <span>© {new Date().getFullYear()} Google&apos;s Expert · A Digitocrate group company</span>
+        <span>© 2023–{new Date().getFullYear()} Google&apos;s Expert · A Digitocrate group company</span>
         <span>Google Ads and YouTube are trademarks of Google LLC. Google&apos;s Expert is an independent agency.</span>
       </div>
     </footer>
