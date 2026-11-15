@@ -2,32 +2,46 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { ThemeProvider } from "@/components/theme-provider"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+import { site } from "@/lib/site"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "PPC and Social Media Marketing Agency | Google's Expert",
+  metadataBase: new URL(site.url),
+  title: { default: "Google Ads Management Agency | Paid Marketing Experts | Google's Expert", template: "%s" },
   description:
-    "PPC and social media marketing by Google's Expert: Google Ads, Facebook, Instagram, TikTok and LinkedIn campaigns measured by cost per lead. Islamabad, Pakistan.",
+    "Google's Expert manages Google Ads, Performance Max, YouTube and Meta ads for businesses in the UK, USA, Canada, UAE, Australia and Pakistan — reported by cost per lead.",
   icons: { icon: [{ url: "/favicon.ico", sizes: "48x48" }, { url: "/icon-192.png", type: "image/png", sizes: "192x192" }], apple: "/apple-icon.png" },
-  keywords: ["PPC management", "social media marketing", "Google Ads agency", "Facebook ads agency"],
+  alternates: { canonical: "/" },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+const org = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": `${site.url}/#organization`,
+  name: site.name,
+  url: site.url,
+  logo: `${site.url}/google-expert-logo.webp`,
+  email: site.email,
+  telephone: site.phone,
+  address: { "@type": "PostalAddress", streetAddress: "Office No. 5, 2nd Floor, Laraib Plaza, G-9 Markaz", addressLocality: "Islamabad", addressCountry: "PK" },
+  areaServed: ["GB", "US", "CA", "AE", "SA", "AU", "PK"],
+  parentOrganization: { "@type": "Organization", name: "Digitocrate", url: "https://digitocrate.com/" },
+}
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans antialiased bg-background`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {children}
-          <Analytics />
-        </ThemeProvider>
+    <html lang="en" className="dark">
+      <body className="font-sans antialiased bg-background text-foreground">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+        <SiteHeader />
+        <main className="min-h-screen overflow-hidden">{children}</main>
+        <SiteFooter />
+        <Analytics />
       </body>
     </html>
   )
